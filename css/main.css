@@ -11,15 +11,18 @@ body {
 
 .wrapper {
 	max-width: 90%;
-	margin: 10px auto;
+	margin: 0 auto;
 }
 
 video {
-  width: 100%;
+  	width: 100%;
 }
 #video-container {
 	width: 100%;
+	max-width: 1920px;
+	max-height: 1080px;
 }
+
 figure {
 	width:100%;
 	margin:20px auto;
@@ -46,11 +49,6 @@ input[type="range"]::-webkit-slider-thumb {
 img {
 	height: 20px;
 }
-
-/*/***** Old Code *****/
-
-
-/* Test font highlight */
 
 .highlight {
 	color: orange;
@@ -118,13 +116,9 @@ progress {
 	bottom: 0px;
 }
 
-/* FILLS IN PLAYBACK BAR in FIREFOX */
-
 progress::-moz-progress-bar {
 	background-color: #E88C0B;
 }
-
-/*Chrome and Safari*/
 
 progress::-webkit-progress-bar {
 	background: rgba(0,0,0,0);
