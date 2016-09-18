@@ -42,12 +42,13 @@ dTime.innerHTML = ":" + Math.floor(video.duration)
 
 	//Event listening for the full-screen button
 	fullScreenButton.addEventListener("click", function (){
-		if (video.requestFullscreen) {
-			video.requestFullscreen();
-		} else if (video.mozRequestFullScreen) {
-			video.mozRequestFullScreen(); //Firefox {
-		} else if (video.webkitRequestFullScreen){
-			video.webkitRequestFullScreen(); //Chrome and Safari
+		var vidcontainer = document.getElementById("video-container");
+    if (vidcontainer.requestFullscreen) {
+			vidcontainer.requestFullscreen();
+		} else if (vidcontainer.mozRequestFullScreen) {
+			vidcontainer.mozRequestFullScreen(); //Firefox {
+		} else if (vidcontainer.webkitRequestFullScreen){
+			vidcontainer.webkitRequestFullScreen(); //Chrome and Safari
 		}
     fullScreenButton.innerHTML = '<img src="icons/fullscreen-icon.png"/>'
 	});	
