@@ -38,7 +38,7 @@ input[type="range"] {
 }
 
 input[type="range"]::-webkit-slider-thumb {
-     -webkit-appearance: none;
+/*     -webkit-appearance: none;*/
     background-color: orange;
     opacity: 0.8;
     width: 10px;
@@ -60,7 +60,7 @@ button {
 	width: 35px;
 	border: none;
 	padding: 0px;
-	opacity: 100%;
+	opacity: 1;
 	cursor: pointer;
 	}
 
@@ -128,13 +128,8 @@ progress::-webkit-progress-value {
 	background-color: orange;
 }
 
-::-webkit-media-controls {
-  display:none !important;
-}
 
-:-webkit-full-screen-ancestor:not(iframe) {
-	z-index: 0;
-}
+
 
 
 
