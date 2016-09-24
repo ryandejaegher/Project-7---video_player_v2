@@ -12,7 +12,7 @@ window.onload = function() {
 
 //Set initial current time and duration time
 cTime.innerHTML = "0:00" + " / "+ Math.floor(video.currentTime)
-dTime.innerHTML = ":" + Math.floor(video.duration)
+dTime.innerHTML = "01" + Math.floor(video.duration)
 	
   // Event listener for the play/pause button
 	playButton.addEventListener("click", function() {
@@ -88,9 +88,7 @@ video.addEventListener("loadeddata", function(){
   var dTime = document.getElementById("durationTime");
   var minutes = Math.floor(video.duration / 60);
   var seconds = Math.floor(video.duration - minutes * 60);
-  var x = minutes < 10 ? "" + minutes + ":":minutes;
-  var y = seconds < 10 ? "" + seconds : seconds;
-  dTime.innerHTML = ( x + y + " ");
+  dTime.innerHTML = (minutes + seconds);
 });
 
 
