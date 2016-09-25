@@ -84,14 +84,14 @@ video.addEventListener('timeupdate', function(){
 });
 
    //Add video duration
-video.addEventListener('canplay', function(){
+video.onloadstart = function(){
   var dTime = document.getElementById("durationTime");
   var minutes = Math.floor(video.duration / 60);
   var seconds = Math.floor(video.duration - minutes * 60);
   var x = minutes < 10 ? "" + minutes + ":":minutes;
   var y = seconds < 10 ? "0" + seconds : seconds;
   dTime.innerHTML = (" " +  x + y + " ");
-});
+};
 
 
 
