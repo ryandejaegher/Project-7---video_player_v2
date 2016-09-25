@@ -84,17 +84,19 @@ video.addEventListener('timeupdate', function(){
 });
 
    //Add video duration
-video.onloadstart = function(){
+video.addEventListener('loadstart', function(){
   var dTime = document.getElementById("durationTime");
   var minutes = Math.floor(video.duration / 60);
   var seconds = Math.floor(video.duration - minutes * 60);
   var x = minutes < 10 ? "" + minutes + ":":minutes;
   var y = seconds < 10 ? "0" + seconds : seconds;
   dTime.innerHTML = (" " +  x + y + " ");
+});
+
+////Testing loadstart function
+video.onloadstart = function() {
+    console.log("Starting to load video");
 };
-
-
-
 
 // Volume Controls - Toggle on/off
 
