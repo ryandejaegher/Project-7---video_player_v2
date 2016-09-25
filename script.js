@@ -84,21 +84,20 @@ video.addEventListener('timeupdate', function(){
 });
 
    //Add video duration
-video.addEventListener('loadstart', function(){
+if (video.readyState = 4) {   
   var dTime = document.getElementById("durationTime");
   var minutes = Math.floor(video.duration / 60);
   var seconds = Math.floor(video.duration - minutes * 60);
   var x = minutes < 10 ? "" + minutes + ":":minutes;
   var y = seconds < 10 ? "0" + seconds : seconds;
   dTime.innerHTML = (" " +  x + y + " ");
-});
+}
 
-////Testing loadstart function
-function test() {
+
+/*////Testing loadstart function
+video.oncanplay = function() {
     console.log("Starting to load video");
-};
-
-test()
+};*/
 
 // Volume Controls - Toggle on/off
 
