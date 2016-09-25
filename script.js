@@ -94,9 +94,11 @@ video.addEventListener('loadstart', function(){
 });
 
 ////Testing loadstart function
-video.onloadstart = function() {
+function test() {
     console.log("Starting to load video");
 };
+
+test()
 
 // Volume Controls - Toggle on/off
 
