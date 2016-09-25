@@ -11,8 +11,8 @@ window.onload = function() {
 
 
 //Set initial current time and duration time
-cTime.innerHTML = "0:00" + " / "+ Math.floor(video.currentTime)
-dTime.innerHTML = "01" + Math.floor(video.duration)
+/*cTime.innerHTML = "0:00" + " / "+ Math.floor(video.currentTime)*/
+/*dTime.innerHTML = ":" + Math.floor(video.duration)*/
 	
   // Event listener for the play/pause button
 	playButton.addEventListener("click", function() {
@@ -80,16 +80,20 @@ video.addEventListener('timeupdate', function(){
   var seconds = Math.floor(video.currentTime - minutes * 60);
   var x = minutes < 10 ? "" + minutes + ":":minutes;
   var y = seconds < 10 ? "0" + seconds : seconds;
-  cTime.innerHTML = ( x + y + " " + "/ " );
+  cTime.innerHTML = ( x + y + "  " + "/ " );
 });
 
    //Add video duration
-video.addEventListener("loadeddata", function(){
+video.addEventListener('loadeddata', function(){
   var dTime = document.getElementById("durationTime");
   var minutes = Math.floor(video.duration / 60);
   var seconds = Math.floor(video.duration - minutes * 60);
-  dTime.innerHTML = (minutes + seconds);
+  var x = minutes < 10 ? "" + minutes + ":":minutes;
+  var y = seconds < 10 ? "0" + seconds : seconds;
+  dTime.innerHTML = (" " +  x + y + " ");
 });
+
+
 
 
 // Volume Controls - Toggle on/off
