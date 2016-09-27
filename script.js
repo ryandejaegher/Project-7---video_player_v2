@@ -84,7 +84,7 @@ video.addEventListener('timeupdate', function(){
 });
 
    //Add video duration
-if (video.readyState = 4) {   
+if (video.readyState = 1) {   
   var dTime = document.getElementById("durationTime");
   var minutes = Math.floor(video.duration / 60);
   var seconds = Math.floor(video.duration - minutes * 60);
@@ -93,13 +93,6 @@ if (video.readyState = 4) {
   dTime.innerHTML = (" " +  x + y + " ");
 }
 
-
-/*////Testing loadstart function
-video.oncanplay = function() {
-    console.log("Starting to load video");
-};*/
-
-// Volume Controls - Toggle on/off
 
 volume.addEventListener('click', function() {
   if (video.muted === false) {
